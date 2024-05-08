@@ -1,0 +1,121 @@
+body {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  background-image: url('images/fondo.jpg');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: inherit;
+  background-size: inherit;
+  background-position: inherit;
+  filter: blur(5px); 
+  z-index: -1;
+}
+
+.title {
+  font-size: 2.5em;
+  font-weight: bold;
+  color: #004777;
+  font-family: 'ADLaM Display', sans-serif; 
+}
+
+.description {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #7b4bbf;
+  font-family: 'ADLaM Display', sans-serif; 
+}
+
+main {
+  max-width: 800px;
+  margin: 130px auto 50px; 
+  padding: 20px;
+  background-color: rgba(245, 245, 245, 0.8);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+}
+
+footer {
+  text-align: left;
+  margin-top: auto;
+  padding: 9px;
+  background-color: rgba(245, 245, 245, 0.3);
+  border-top: none;
+}
+
+.icons {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex; 
+  justify-content: center; 
+  margin-left: 20px;
+}
+
+.icons li {
+  margin-right: 30px; 
+}
+
+.icons a {
+  color: #004777; 
+  text-decoration: none; 
+  font-size: 24px; 
+  display: inline-block;
+  padding: 10px;
+  background-color: rgba(245, 245, 245, 0.8);
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
+}
+
+.icons a span {
+  font-family: 'ADLaM Display', sans-serif; 
+}
+
+.icons a:hover {
+  color: #12CBFF;
+}
+
+/*mobiles*/
+
+@media only screen and (max-width: 768px) {
+  /* Adjust styles for mobile devices */
+
+  main {
+    margin-top: 30px; 
+  }
+
+ .icons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+ .icons li {
+    margin-bottom: 10px;
+  }
+  
+ .icons a {
+    font-size: 24px;
+    min-width: 210px; 
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px; 
+  }
+  
+ .icons a span {
+    font-family: 'ADLaM Display', sans-serif;
+  }
+}
